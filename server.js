@@ -20,7 +20,7 @@ app.use((req,res,next) => {
 })
 
 // connect to db
-mongoose.connect(conn,{useNewUrlParser: true,useUnifiedTopology: true})
+mongoose.connect(conn)
     .then(() => {
         app.listen(port, () => console.log(`Connected db && listening on port ${port}!`))
     })
